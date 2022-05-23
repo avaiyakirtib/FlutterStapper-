@@ -33,13 +33,8 @@ class _CompleteScreenState extends State<CompleteScreen> {
            Image.asset(success),
             Lottie.asset(succesanimations,height: h.h40,width: w.w100,repeat: false),
             SSpace,
-
-
-
-
           ],
         ),
-
     );
   }
 }

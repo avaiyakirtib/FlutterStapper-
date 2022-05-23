@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-
+//Form validation functions
 
 String? validateEmail(String? value) {
   if (value!.isEmpty) return "Please Enter email";

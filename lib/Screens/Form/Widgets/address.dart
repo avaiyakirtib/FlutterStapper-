@@ -30,19 +30,15 @@ class _AddressScreenState extends State<AddressScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-
         child: Form(
-
           key: widget.formkey,
           child: Column(
             children: [
-
               appField( 'Address',
                 addresscontroller,
                 TextInputType.text,
               validator: validateAddress,
               ),
-
               appField( 'City',
                 citycontroller,
                 TextInputType.text,
@@ -58,23 +54,14 @@ class _AddressScreenState extends State<AddressScreen> {
                 TextInputType.text,
               validator: validateCountry
               ),
-
               appField( 'Province',
                 provincecontroller,
                 TextInputType.text,
               validator: validateProvince
               ),
-
-
-
-
-
-
-
             ],
           ),
         ),
-
     );
   }
 }

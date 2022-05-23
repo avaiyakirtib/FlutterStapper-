@@ -1,5 +1,8 @@
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+
+//Classes for setting up dynamic heights
+
 class h {
   static var h100 = Get.height;
   static var h99 = Get.height * 0.99;

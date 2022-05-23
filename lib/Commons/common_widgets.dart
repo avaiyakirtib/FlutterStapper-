@@ -4,7 +4,7 @@ import 'GetSize.dart';
 import 'colors.dart';
 
 
-
+//Common widget at one place
 
 Widget appField(
     String hint,
@@ -25,18 +25,13 @@ Widget appField(
   return Column(
     children: [
       TextFormField(
-
         cursorColor:appcolor,
         obscureText: obscureText,
         enabled: enabled,
-
         style:  GoogleFonts.poppins(
           textStyle: const TextStyle(color:black,fontWeight: FontWeight.w600),
         ),
-
         decoration: InputDecoration(
-
-
           contentPadding:  EdgeInsets.only(left: w.w8),
           errorStyle:  TextStyle(
             fontSize:sp.sp10,
@@ -44,12 +39,10 @@ Widget appField(
           suffixIcon: InkWell(onTap: surfixTap, child: Icon(surfix)),
           border:  const OutlineInputBorder(
             borderSide: BorderSide(
-
             ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5.0),
-
             borderSide:  BorderSide(
                 color: appcolor,
                 width: h.h1-6.5
@@ -59,11 +52,9 @@ Widget appField(
             borderRadius: BorderRadius.circular(5.0),
             borderSide:  BorderSide(
               color: grey.withOpacity(0.2),
-
             ),
           ),
           hintText: hint,
-
           hintStyle:  GoogleFonts.poppins(
             textStyle: TextStyle(color: Colors.grey,fontWeight: FontWeight.w400),
           ),
@@ -76,13 +67,10 @@ Widget appField(
         height: h.h2+5,
       )
     ],
-
   );
 }
 
-
-
-
+//Social button widget
 Widget socialButton (BuildContext context,Color iconcolor,Color color,String Lable,String Icon,Function? OnPress){
   return Column(
     children: [
@@ -96,17 +84,13 @@ Widget socialButton (BuildContext context,Color iconcolor,Color color,String Lab
           decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.circular(5)
-
-
           ),
           child: Row (
             children: [
               Container(
-
                   decoration: BoxDecoration(
                     color: iconcolor,
                     borderRadius: BorderRadius.circular(5),
-
                   ),
                   child: Padding(
                     padding:  EdgeInsets.all(h.h1+5),
@@ -116,11 +100,9 @@ Widget socialButton (BuildContext context,Color iconcolor,Color color,String Lab
               Expanded(child: Container(child: Center(child: Text(Lable,style:GoogleFonts.poppins(
                 textStyle: TextStyle(color: white,
                     fontSize: sp.sp10,
-
                     fontWeight: FontWeight.w600),
               )
               ))))
-
             ],
           )
         ),

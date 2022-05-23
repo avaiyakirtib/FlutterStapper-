@@ -38,14 +38,12 @@ class _BasicInfoScreenState extends State<BasicInfoScreen> {
             key: widget.formkey,
             child: Column(
               children: [
-
                 appField( 'Email Address',
                     Emailcontroller,
                     TextInputType.text,
 
                     validator: validateEmail
                 ),
-
                 appField( 'Password',
                     passcontroller,
                     TextInputType.text,
@@ -54,7 +52,6 @@ class _BasicInfoScreenState extends State<BasicInfoScreen> {
                 ),
                 appField( 'Repeat Password',
                     repeatpasscontroller,
-
                     TextInputType.text,
                     obscureText: true,
                     validator: validatePassword,
@@ -64,18 +61,10 @@ class _BasicInfoScreenState extends State<BasicInfoScreen> {
                     TextInputType.text,
                     validator: validNickName,),
                 SSpace,
-
-
-
-
               ],
             ),
           ),
         ),
-
     );
   }
-
-
-
 }
