@@ -54,7 +54,15 @@ class _BasicInfoScreenState extends State<BasicInfoScreen> {
                     repeatpasscontroller,
                     TextInputType.text,
                     obscureText: true,
-                    validator: validatePassword,
+                    validator:  (val){
+                      if(val!.isEmpty) {
+                        return "Please Enter Repeat Password";
+                      }
+                      if(val != passcontroller.text) {
+                        return 'Password Not Match';
+                      }
+                      return null;
+                    },
                 ),
                 appField( 'Nick',
                     nickcontroller,

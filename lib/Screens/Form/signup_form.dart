@@ -117,19 +117,9 @@ class _SignupFormState extends State<SignupForm> {
           if (formKeys[activeStep]
               .currentState!
               .validate()) {
-              if(activeStep==1){
-                Timer(const Duration(seconds: 3), () {
-                  setState(() {
-                    isLoad=true;
-                    activeStep++;
-                    isLoad=false;
-                  });
-                });
-              }else{
+              if(activeStep<2){
                 setState(() {
-                  isLoad=true;
                   activeStep++;
-                  isLoad=false;
                 });
               }
           }
@@ -142,7 +132,7 @@ class _SignupFormState extends State<SignupForm> {
                 fontSize: sp.sp12,
                 fontWeight: FontWeight.w600),
           ),),
-        child:activeStep != 2 ?isLoad==true?CircularProgressIndicator(color: white):Text( "Next" ):Text("Verify Email"),
+        child:Text( activeStep == 2 ?"Verify Email":"Next" )
       ),
     );
   }
