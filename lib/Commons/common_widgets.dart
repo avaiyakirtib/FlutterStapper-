@@ -15,6 +15,7 @@ Widget appField(
       bool enabled = true,
       bool obscureText = false,
       Widget? last,
+      int? maxlength,
       IconData? icon,
       IconData? surfix,
       Function()? surfixTap,
@@ -31,10 +32,12 @@ Widget appField(
         style:  GoogleFonts.poppins(
           textStyle: const TextStyle(color:black,fontWeight: FontWeight.w600),
         ),
+        maxLength:maxlength,
         decoration: InputDecoration(
+          counterText: "",
           contentPadding:  EdgeInsets.only(left: w.w8),
           errorStyle:  TextStyle(
-            fontSize:sp.sp10,
+            fontSize:sp.sp8,
           ),
           suffixIcon: InkWell(onTap: surfixTap, child: Icon(surfix)),
           border:  const OutlineInputBorder(
