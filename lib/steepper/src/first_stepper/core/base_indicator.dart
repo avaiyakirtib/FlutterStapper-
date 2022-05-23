@@ -37,6 +37,7 @@ class BaseIndicator extends StatelessWidget {
   final double margin;
 
   final BoxBorder? border;
+  final double? lablePadding;
 
   BaseIndicator({
     this.isSelected = false,
@@ -45,6 +46,7 @@ class BaseIndicator extends StatelessWidget {
     this.lable,
     this.onPressed,
     this.color,
+    this.lablePadding,
     this.activeColor,
     this.activeBorderColor,
     this.unactiveBorderColor,
@@ -63,7 +65,7 @@ class BaseIndicator extends StatelessWidget {
           onTap: onPressed as void Function()?,
           child: child
         ),
-        SizedBox(height: h.h2,),
+        SizedBox(height:lablePadding?? h.h2,),
         Text(lable!,style:TextStyle(color: black,
             fontSize: sp.sp9,
             fontWeight: FontWeight.bold,

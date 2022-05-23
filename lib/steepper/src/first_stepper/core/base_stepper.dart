@@ -12,7 +12,7 @@ typedef OnStepReached = void Function(int index);
 class BaseStepper extends StatefulWidget {
   /// Each child defines a step. Hence, total number of children determines the total number of steps.
   final List<Widget>? children;
-  final List<String>? lablelist =["Basic Info","Address","Complite"];
+  final List<String>? lablelist =["Basic Info","Address","Complete"];
 
   /// Whether to enable or disable the next and previous buttons.
   final bool nextPreviousButtonsDisabled;
@@ -261,7 +261,7 @@ class _BaseStepperState extends State<BaseStepper> {
       radius: widget.stepRadius,
       padding: widget.padding,
       margin: widget.margin,
-
+      lablePadding: _selectedIndex > index?h.h1+2:h.h2,
 
       lable: widget.lablelist![index],
       activeBorderWidth: widget.activeStepBorderWidth,

@@ -45,8 +45,10 @@ class _AddressScreenState extends State<AddressScreen> {
               validator: validateCity
               ),
               appField( 'Postal code',
+
                 postalcodepasscontroller,
                 TextInputType.number,
+              maxlength: 6,
               validator: validatePostal
               ),
               appField( 'Country',

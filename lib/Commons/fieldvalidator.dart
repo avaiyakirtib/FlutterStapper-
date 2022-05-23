@@ -19,11 +19,13 @@ String? validateEmail(String? value) {
 String? validatePassword(String? value) {
   if (value!.toString().trim().isEmpty) return "Please Enter Password";
 
-  if (value.toString().trim().length < 9) {
+  if (value.toString().trim().length < 8) {
     return 'Password must be more than 8 charater';
   }
   return null;
 }
+
+
 
 String? validateCity(String? value) {
   if (value!.toString().trim().isEmpty) return "Please Enter City Name";
